@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ComputresController;
+use App\Http\Controllers\StaticController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+route::get('/hello',[StaticController::class,'index'])->name('home.index');
+route::get('/contact',[StaticController::class,'contact'])->name('home.contact');
+
+route::get('/home',[StaticController::class,'home'])->name('home.hello');
+route::resource('computres' ,ComputresController::class);
