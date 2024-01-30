@@ -13,6 +13,7 @@
             <a href="{{route('home.index')}}">Home</a>
             <a href="{{route('home.contact')}}">Contact</a>
             <a href="{{route('home.hello')}}">hello</a>
+            <a href="{{route('computres.create')}}">create</a>
             <a href="{{route('computres.index')}}">Cumputres</a>
         </nav>
     </div>
