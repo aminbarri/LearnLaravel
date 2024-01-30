@@ -25,6 +25,7 @@
       <p class="card-text" id="display-originCountry">{{$computres ['origin']}}</p>
     </div>
   </div>
+  <a href="{{route('computres.edit',$computres->id)}}">edit</a>
 </div>
 @endsection
 

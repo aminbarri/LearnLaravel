@@ -2,11 +2,13 @@
 @section('content')
     
 <div class="container mt-5">
-    <form method="post" action="{{route('computres.store')}}">
+ <form method="post" action="{{ route('computres.update', ['computre' => $computres->id])}}">
+    
         @csrf
+        @method('PUT')
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name" value="{{old('name')}}" name='name' placeholder="Enter name" >
+        <input type="text" class="form-control" id="name" value="{{$computres->name }}" name='name' placeholder="Enter name" >
         @error('name')
             {{$message}}
         @enderror
@@ -14,7 +16,7 @@
   
       <div class="form-group">
         <label for="price">Price:</label>
-        <input type="text" class="form-control" name="price" value="{{old('price')}}" placeholder="Enter the domain price" >
+        <input type="text" class="form-control" name="price" value="{{$computres->price}}" placeholder="Enter the domain price" >
         @error('price')
             {{$message}}
         @enderror
@@ -22,7 +24,7 @@
   
       <div class="form-group">
         <label for="originCountry">Origin Country:</label>
-        <input type="text" class="form-control" name="origin"  value="{{old('origin')}}" placeholder="Enter the origin country" >
+        <input type="text" class="form-control" name="origin"  value="{{$computres->origin}}" placeholder="Enter the origin country" >
         @error('origin')
             {{$message}}
         @enderror
