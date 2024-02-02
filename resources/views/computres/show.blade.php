@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container mt-5">
-  <h2 class="mb-4">Domain Sale Information</h2>
+  <h2 class="mb-4">Pc Information</h2>
 
   <div class="card">
     <div class="card-body">
@@ -14,23 +14,31 @@
 
   <div class="card mt-3">
     <div class="card-body">
-      <h5 class="card-title">Price</h5>
-      <p class="card-text" id="display-price">{{$computres ['price']}}</p>
+      <h5 class="card-title">Origin Country</h5>
+      <p class="card-text" id="display-originCountry">{{$computres ['origin']}}</p>
     </div>
   </div>
 
   <div class="card mt-3">
     <div class="card-body">
-      <h5 class="card-title">Origin Country</h5>
-      <p class="card-text" id="display-originCountry">{{$computres ['origin']}}</p>
+      <h5 class="card-title">Price</h5>
+      <p class="card-text" id="display-price">{{$computres ['price']}}$</p>
     </div>
   </div>
-  <a href="{{route('computres.edit',$computres->id)}}">edit</a>
+<div class="sum_edit">
+   <form action="{{route('computres.edit',$computres->id)}}" method="post">
+    @csrf
+    @method('GET')
+   <button type="submit" class=" btn_tst btn btn-primary ">edit</button>
+</form>
+  
   <form action="{{route('computres.destroy',$computres->id)}}" method="post">
     @csrf
     @method('DELETE')
-   <button type="submit" class="btn btn-primary">delete</button>
+   <button type="submit" class="btn_tst btn btn-primary ">delete</button>
 </form>
+</div>
+ 
   
 </div>
 @endsection

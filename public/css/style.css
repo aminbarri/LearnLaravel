@@ -7,3 +7,28 @@
     margin: 0; /* Remove default margin */
     font-weight: bold;
 }
+.comp{
+    
+    display: inline-grid;
+
+}
+.comp a {
+    text-decoration: none;
+    background-color: rgb(241, 191, 191);
+    padding: 18px;
+   color: black;
+    border-radius: 3px ;
+    margin-bottom: 50px;
+}
+.comp a:hover{
+    background-color: rgb(168, 120, 120);
+}
+
+.btn{
+    width: 30vw;
+    margin: 15px;
+}
+.sum_edit{
+    display: flex;
+
+}
