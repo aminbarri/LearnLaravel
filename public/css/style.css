@@ -1,0 +1,9 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height of the body to the viewport height */
+    margin: 0; /* Remove default margin */
+    font-weight: bold;
+}

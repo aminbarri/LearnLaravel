@@ -2,8 +2,9 @@
 @section('title','Hello')
 
 @section('content')
-    <div>
-  <p>this is hello page!!</p>  
+  <div class='content'>
+  <p>this is HOME page!!</p>
+   <div><strong>Welcome</strong></div>
 </div>
 @endsection
 

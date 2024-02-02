@@ -3,8 +3,10 @@
 
 @section('content')
   
-<div>
-    <p>this is contact page!!</p>  
-  </div>
+<div class='content'>
+  <p>this is Contact page!</p>
+   <div>You can send any quetion!</div>
+</div>
+
 @endsection
 

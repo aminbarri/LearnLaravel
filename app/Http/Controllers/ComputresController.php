@@ -15,8 +15,9 @@ class ComputresController extends Controller
      */
     public function index()
     {
-        return view('computres.index',[
-            'computres'=> Computer::all()
+       
+        return view('computres.index', [
+            'computres' => Computer::all()
         ]);
        
     }
@@ -55,7 +56,7 @@ class ComputresController extends Controller
      */
     public function show($computers)
     {
-       return view('computres.index',[
+       return view('computres.show',[
         'computres'=>Computer::findOrfail($computers)
     ]);
     }
@@ -92,8 +93,10 @@ class ComputresController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($computer)
     {
-        //
+        $to_delete=Computer::findOrFail($computer);
+        $to_delete->delete();
+        return redirect()->route('computres.index');
     }
 }
